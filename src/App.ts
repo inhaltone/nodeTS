@@ -7,5 +7,5 @@ const runThis = (params: string) => {
 
 const params = runThis('test');
 const classTest = new Tester('i am a string');
-console.log(params);
+console.log(params, 'trelane me kano alagges');
 console.log(classTest.value);

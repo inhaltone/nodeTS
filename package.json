@@ -1,15 +1,17 @@
 {
   "name": "nodets",
   "version": "1.0.0",
-  "description": "Node js starter with Typescript and babel compiler",
+    "description": "Node js starter with Typescript and babel compiler",
   "main": "./dist/App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
-    "compile": "cross-env-shell babel src -d dist --source-maps --extensions '.ts'",
+    "compile": "cross-env-shell babel src -d dist --source-maps inline --extensions '.ts'",
     "build": "npm run clean && npm run compile",
     "typecheck": "tsc --p .",
     "build-typecheck": "npm run typecheck && npm run build",
+    "dev": "cross-env-shell babel src --watch --out-dir dist --source-maps inline --extensions '.ts'",
+    "node": "node ./dist/App.js",
     "start": "npm run build-typecheck && node ./dist/App.js"
   },
   "author": "inhaltone",
